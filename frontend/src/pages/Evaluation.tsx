@@ -4,9 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Upload, Loader, ArrowLeft } from "lucide-react";
+import { Loader, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
+import { authFetch } from "@/lib/api";
 
 interface FormData {
   productName: string;
@@ -33,26 +34,7 @@ const Evaluation = () => {
   const [progress, setProgress] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [report, setReport] = useState<string | null>(null);
-  const [uploadStatus, setUploadStatus] = useState<string>("No video selected");
   const [isLoading, setIsLoading] = useState(false);
-
-  // Handle video file selection
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      if (file.size > 100 * 1024 * 1024) { // 100MB limit
-        toast({
-          title: "File too large",
-          description: "Please select a video file smaller than 100MB",
-          variant: "destructive"
-        });
-        return;
-      }
-      setUploadStatus(`Selected file: ${file.name}`);
-    } else {
-      setUploadStatus("No video selected");
-    }
-  };
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
@@ -60,20 +42,10 @@ const Evaluation = () => {
     setIsLoading(true);
     setProgress(10);
 
-    const formDataObj = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      formDataObj.append(key, value);
-    });
-
-    const videoInput = document.getElementById("video-upload") as HTMLInputElement;
-    if (videoInput?.files?.[0]) {
-      formDataObj.append("video_file", videoInput.files[0]);
-    }
-
     try {
-      const response = await fetch("http://127.0.0.1:5000/analyze", {
+      const response = await authFetch("/analyze", {
         method: "POST",
-        body: formDataObj,
+        body: JSON.stringify(formData),
       });
 
       setProgress(50);
@@ -83,8 +55,11 @@ const Evaluation = () => {
       }
 
       const data = await response.json();
+      const jobId = data.job_id;
+
+      const resultUrl = await pollJob(jobId);
       setProgress(100);
-      setReport(data.report);
+      setReport(`Report ready. Download: ${resultUrl}`);
       setShowResults(true);
       
       toast({
@@ -98,10 +73,22 @@ const Evaluation = () => {
         description: "There was an error analyzing your advertisement. Please try again.",
         variant: "destructive"
       });
-      setUploadStatus("Upload failed. Please try again.");
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const pollJob = async (jobId: string): Promise<string> => {
+    let attempts = 0;
+    while (attempts < 60) {
+      const res = await authFetch(`/jobs/${jobId}`);
+      const data = await res.json();
+      if (data.status === "finished" && data.result_url) return data.result_url;
+      if (data.error) throw new Error(data.error);
+      await new Promise((r) => setTimeout(r, 3000));
+      attempts += 1;
+    }
+    throw new Error("Timed out waiting for analysis");
   };
 
   // Reset form to initial state
@@ -113,7 +100,6 @@ const Evaluation = () => {
       colorPalette: "#34D399",
       videoUrl: "",
     });
-    setUploadStatus("No video selected");
     setShowResults(false);
     setReport(null);
     setProgress(0);
@@ -208,28 +194,22 @@ const Evaluation = () => {
                       />
                     </div>
 
-                    {/* Video Upload Section */}
-                    <div className="space-y-2">
-                      <Label>Video Upload</Label>
-                      <div className="grid gap-4">
-                        <Input
-                          type="file"
-                          accept="video/*"
-                          className="hidden"
-                          id="video-upload"
-                          onChange={handleVideoChange}
-                        />
-                        <Label
-                          htmlFor="video-upload"
-                          className="cursor-pointer flex flex-col items-center gap-2 p-6 border-2 border-dashed border-gray-300 rounded-lg hover:border-emerald-500 transition-colors"
-                        >
-                          <Upload className="h-8 w-8 text-gray-400" />
-                          <span className="text-sm text-gray-600">
-                            Drag and drop or click to upload
-                          </span>
-                        </Label>
-                        <p className="text-sm text-gray-500 text-center">{uploadStatus}</p>
-                      </div>
+                    {/* Video URL */}
+                    <div>
+                      <Label htmlFor="videoUrl">Video URL *</Label>
+                      <Input
+                        id="videoUrl"
+                        required
+                        placeholder="https://..."
+                        value={formData.videoUrl}
+                        onChange={(e) =>
+                          setFormData({ ...formData, videoUrl: e.target.value })
+                        }
+                        className="transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
+                      />
+                      <p className="text-xs text-gray-500 mt-1">
+                        Provide a direct URL to your MP4 (S3/R2 or public link).
+                      </p>
                     </div>
 
                     {/* Progress Bar */}

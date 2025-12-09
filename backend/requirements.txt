@@ -1,43 +1,36 @@
-google-generativeai
-numpy
-opencv-python
-scikit-learn
-pillow
-# Core Libraries
-numpy
-torch
-opencv-python
-tensorflow
-Pillow
-scipy
-pydub
-requests
-python-dotenv
+# Core web stack
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-dotenv==1.0.1
+httpx==0.27.2
+gunicorn==23.0.0
 
-# AI/ML Libraries
-transformers
-diffusers
-google-generativeai
+# Auth / security
+python-jose==3.3.0
+passlib[bcrypt]==1.7.4
 
-# Audio Processing
-soundfile
-librosa
+# Background jobs
+redis==5.0.8
+rq==1.16.2
 
-# Image Processing
-scikit-image
+# Storage
+boto3==1.35.58
 
-# Utility Libraries
-tqdm
-dataclasses
-typing-extensions
-python-dateutil
-urllib3
+# AI/ML Clients
+replicate==0.25.2
+google-generativeai==0.8.3
 
-# Optional Dependencies (for full functionality)
-cuda-python  # For GPU support
-ffmpeg-python  # For video processing
-flask==3.0.0
-flask-cors==4.0.0
-python-dotenv==1.0.0
-opencv-python-headless==4.8.1.78
-numpy>=1.24.3
+# Media processing
+ffmpeg-python==0.2.0
+opencv-python-headless==4.10.0.84
+pillow==10.4.0
+numpy==1.26.4
+scipy==1.13.1
+soundfile==0.12.1
+librosa==0.10.2.post1
+
+# Validation / utilities
+pydantic==2.9.2
+pydantic-settings==2.6.1
+python-dateutil==2.9.0.post0
+tqdm==4.66.5

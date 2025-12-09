@@ -7,6 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, Loader, Download, BarChart  } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
+import { authFetch } from "@/lib/api";
 
 interface FormData {
   productName: string;
@@ -204,28 +205,24 @@ const Generator = () => {
     setProgress(10);
 
     try {
-      const response = await fetch('http://localhost:5000/generate', {
+      const response = await authFetch('/generate', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify(formData),
       });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
 
       setProgress(50);
 
       const data = await response.json();
-
       if (data.error) {
         throw new Error(data.error);
       }
 
       setProgress(100);
-      setVideoUrl(data.video_url);
+
+      // Poll job status
+      const jobId = data.job_id;
+      const resultUrl = await pollJob(jobId);
+      setVideoUrl(resultUrl);
       setShowResults(true);
 
       toast({
@@ -242,6 +239,19 @@ const Generator = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const pollJob = async (jobId: string): Promise<string> => {
+    let attempts = 0;
+    while (attempts < 60) {
+      const res = await authFetch(`/jobs/${jobId}`);
+      const data = await res.json();
+      if (data.status === "finished" && data.result_url) return data.result_url;
+      if (data.error) throw new Error(data.error);
+      await new Promise((r) => setTimeout(r, 3000));
+      attempts += 1;
+    }
+    throw new Error("Timed out waiting for job");
   };
 
   const handleNewVideo = () => {
