@@ -1,0 +1,84 @@
+Video Advertisement Analysis Report
+===========================================================================
+
+Product: Final_Advertisement (1)
+Brand: Ecovive
+Analysis Date: 2024-12-22 13:35:29
+
+Overall Score: 66/100
+
+Score Calculation:
+-----------------
+Technical Score: 48.2
+- Weight: 30.0%
+- Weighted Contribution: 14.5
+
+AI Score: 73.3
+- Weight: 70.0%
+- Weighted Contribution: 51.3
+
+Final Score Calculation:
+Final Score: (48.2 × 0.3) + (73.3 × 0.7) = 65.8
+------------------------
+
+Visual Impact:
+Score: 22/30
+- Visual clarity and composition alignment
+- Color harmony and balance
+- Overall visual appeal
+
+Creative Execution:
+Score: 15/25
+- Innovation in presentation
+- Storytelling effectiveness
+- Brand integration quality
+
+Audience Engagement:
+Score: 17/25
+- Target audience alignment
+- Message clarity
+- Call-to-action effectiveness
+
+Production Quality:
+Score: 16/20
+- Technical excellence
+- Smooth transitions
+- Professional polish
+
+Technical Metrics:
+-----------------
+Color Analysis:
+- Color Harmony: 0.71
+- Color Saturation: 0.26
+- Brightness Level: 0.58
+
+Composition Analysis:
+- Balance Score: 0.83
+- Rule of Thirds: 0.57
+- Overall Composition: 0.70
+
+Brand & Product Presence:
+- Brand Visibility: 0.50
+- Product Focus: 0.03
+- Visual Clarity: 0.58
+
+Key Insights:
+------------
+- Strong color harmony enhances visual appeal
+- Excellent visual balance and composition
+
+Recommendations:
+---------------
+- Strengthen brand visibility in the video
+- Increase adherence to brand color guidelines
+- Improve product visibility and prominence
+- Enhance product clarity and focus
+
+Technical Specifications:
+-----------------------
+- Frames Analyzed: 1
+- Sample Rate: 30 fps
+- Filename: Final_Advertisement (1).mp4
+
+Note: Scores are normalized on a scale of 0-100. 
+Raw analysis data saved in JSON format for further processing.

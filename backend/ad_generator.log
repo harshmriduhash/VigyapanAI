@@ -1,0 +1,223 @@
+2024-12-23 18:40:30,143 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 18:40:30,143 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 18:40:30,151 - INFO -  * Restarting with stat
+2024-12-23 18:41:11,673 - WARNING -  * Debugger is active!
+2024-12-23 18:41:11,730 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 18:41:15,603 - INFO - 127.0.0.1 - - [23/Dec/2024 18:41:15] "[33mPOST / HTTP/1.1[0m" 404 -
+2024-12-23 18:41:53,658 - INFO - 127.0.0.1 - - [23/Dec/2024 18:41:53] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 18:44:37,911 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 18:44:37,913 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 18:44:37,920 - INFO -  * Restarting with stat
+2024-12-23 18:45:13,881 - WARNING -  * Debugger is active!
+2024-12-23 18:45:13,934 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 18:45:16,871 - INFO - 127.0.0.1 - - [23/Dec/2024 18:45:16] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 18:50:58,277 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 18:50:58,278 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 18:50:58,287 - INFO -  * Restarting with stat
+2024-12-23 18:51:32,505 - WARNING -  * Debugger is active!
+2024-12-23 18:51:32,553 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 18:51:35,611 - INFO - 127.0.0.1 - - [23/Dec/2024 18:51:35] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 18:51:59,185 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 18:51:59,188 - INFO - Downloading preset video...
+2024-12-23 18:51:59,448 - ERROR - Error downloading preset video: 403 Client Error: Forbidden for url: https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__
+2024-12-23 18:51:59,448 - ERROR - Error providing preset video: 403 Client Error: Forbidden for url: https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__
+2024-12-23 18:51:59,449 - ERROR - Error in generate_video: 403 Client Error: Forbidden for url: https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Desktop\Onlinesales.ai\app.py", line 102, in generate_video
+    result = generator.provide_preset_video()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\OneDrive\Desktop\Onlinesales.ai\generatorcode.py", line 168, in provide_preset_video
+    response.raise_for_status()  # Raise an error for bad status codes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\OneDrive\Desktop\Onlinesales.ai\venv\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__
+2024-12-23 18:51:59,694 - INFO - 127.0.0.1 - - [23/Dec/2024 18:51:59] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2024-12-23 18:52:29,772 - INFO - 127.0.0.1 - - [23/Dec/2024 18:52:29] "[33mPOST / HTTP/1.1[0m" 404 -
+2024-12-23 19:07:20,002 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 19:07:20,003 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 19:07:20,010 - INFO -  * Restarting with stat
+2024-12-23 19:07:57,375 - WARNING -  * Debugger is active!
+2024-12-23 19:07:57,419 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 19:08:12,534 - INFO - 127.0.0.1 - - [23/Dec/2024 19:08:12] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 19:08:36,544 - INFO - Matching criteria check - Product: False, Tagline: False
+2024-12-23 19:08:36,546 - INFO - Generating new advertisement...
+2024-12-23 19:08:44,357 - INFO - Generating Scene 1/6: Here's a 2-second cricket bat ad storyboard with 6 scenes, each lasting 0.3 seconds, and the tagline "jeeto jeeto" (win win):
+2024-12-23 19:18:29,373 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 19:18:29,374 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 19:18:29,377 - INFO -  * Restarting with stat
+2024-12-23 19:18:45,333 - WARNING -  * Debugger is active!
+2024-12-23 19:18:45,353 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 19:18:46,648 - INFO - 127.0.0.1 - - [23/Dec/2024 19:18:46] "[33mPOST / HTTP/1.1[0m" 404 -
+2024-12-23 19:19:17,689 - INFO - 127.0.0.1 - - [23/Dec/2024 19:19:17] "[33mPOST / HTTP/1.1[0m" 404 -
+2024-12-23 19:21:11,294 - INFO - 127.0.0.1 - - [23/Dec/2024 19:21:11] "[33mPOST /analyse HTTP/1.1[0m" 404 -
+2024-12-23 19:21:50,362 - INFO - Validating inputs...
+2024-12-23 19:21:50,364 - INFO - Extracting frames...
+2024-12-23 19:21:50,609 - INFO - Performing technical analysis...
+2024-12-23 19:21:52,714 - INFO - Performing AI analysis...
+2024-12-23 19:22:25,141 - INFO - Aggregating results...
+2024-12-23 19:22:25,154 - INFO - Analysis complete. Report saved to analysis_results\analysis_report_final_advertisement_2.txt
+2024-12-23 19:22:25,169 - INFO - 127.0.0.1 - - [23/Dec/2024 19:22:25] "POST /analyze HTTP/1.1" 200 -
+2024-12-23 19:37:18,331 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 19:37:18,331 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 19:37:18,335 - INFO -  * Restarting with stat
+2024-12-23 19:37:36,013 - WARNING -  * Debugger is active!
+2024-12-23 19:37:36,033 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 19:37:52,388 - INFO - 127.0.0.1 - - [23/Dec/2024 19:37:52] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 19:38:04,657 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 19:38:04,658 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_193752\\ecovive_ad.mp4'}
+2024-12-23 19:38:04,787 - INFO - 127.0.0.1 - - [23/Dec/2024 19:38:04] "POST /generate HTTP/1.1" 200 -
+2024-12-23 19:45:58,282 - INFO -  * Detected change in 'C:\\Users\\HP\\OneDrive\\Desktop\\Onlinesales.ai\\app.py', reloading
+2024-12-23 19:46:01,558 - INFO -  * Restarting with stat
+2024-12-23 19:46:20,017 - WARNING -  * Debugger is active!
+2024-12-23 19:46:20,038 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 19:47:02,585 - INFO -  * Detected change in 'C:\\Users\\HP\\OneDrive\\Desktop\\Onlinesales.ai\\app.py', reloading
+2024-12-23 19:47:03,763 - INFO -  * Restarting with stat
+2024-12-23 19:47:18,332 - WARNING -  * Debugger is active!
+2024-12-23 19:47:18,352 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 19:47:30,786 - INFO - 127.0.0.1 - - [23/Dec/2024 19:47:30] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 19:47:46,287 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 19:47:46,289 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_194731\\ecovive_ad.mp4'}
+2024-12-23 19:47:46,289 - ERROR - Error in generate_video: cannot access local variable 'output_path' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Desktop\Onlinesales.ai\app.py", line 137, in generate_video
+    "video_url": f"http://localhost:5000/generated/{os.path.basename(output_path)}"
+                                                                     ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'output_path' where it is not associated with a value
+2024-12-23 19:47:46,411 - INFO - 127.0.0.1 - - [23/Dec/2024 19:47:46] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2024-12-23 19:50:30,146 - INFO -  * Detected change in 'C:\\Users\\HP\\OneDrive\\Desktop\\Onlinesales.ai\\app.py', reloading
+2024-12-23 19:50:32,855 - INFO -  * Restarting with stat
+2024-12-23 19:50:51,676 - WARNING -  * Debugger is active!
+2024-12-23 19:50:51,702 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 19:53:57,002 - INFO - 127.0.0.1 - - [23/Dec/2024 19:53:57] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 19:54:09,921 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 19:54:09,923 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_195357\\ecovive_ad.mp4'}
+2024-12-23 19:54:10,003 - INFO - 127.0.0.1 - - [23/Dec/2024 19:54:10] "POST /generate HTTP/1.1" 200 -
+2024-12-23 19:59:42,000 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 19:59:42,000 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 19:59:42,004 - INFO -  * Restarting with stat
+2024-12-23 20:00:06,935 - WARNING -  * Debugger is active!
+2024-12-23 20:00:06,973 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 20:00:42,714 - INFO - Validating inputs...
+2024-12-23 20:00:42,715 - INFO - Extracting frames...
+2024-12-23 20:00:43,641 - INFO - Performing technical analysis...
+2024-12-23 20:00:50,769 - INFO - Performing AI analysis...
+2024-12-23 20:01:27,382 - INFO - Aggregating results...
+2024-12-23 20:01:27,397 - INFO - Analysis complete. Report saved to analysis_results\analysis_report_ecovivefinal.txt
+2024-12-23 20:01:27,416 - INFO - 127.0.0.1 - - [23/Dec/2024 20:01:27] "POST /analyze HTTP/1.1" 200 -
+2024-12-23 20:07:16,897 - INFO - 127.0.0.1 - - [23/Dec/2024 20:07:16] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 20:07:33,365 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 20:07:33,367 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_200717\\ecovive_ad.mp4'}
+2024-12-23 20:07:33,478 - INFO - 127.0.0.1 - - [23/Dec/2024 20:07:33] "POST /generate HTTP/1.1" 200 -
+2024-12-23 20:09:12,948 - INFO - 127.0.0.1 - - [23/Dec/2024 20:09:12] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 20:09:27,950 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 20:09:27,951 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_200913\\ecovive_ad.mp4'}
+2024-12-23 20:09:28,067 - INFO - 127.0.0.1 - - [23/Dec/2024 20:09:28] "POST /generate HTTP/1.1" 200 -
+2024-12-23 20:10:23,323 - INFO - Validating inputs...
+2024-12-23 20:10:23,326 - INFO - Extracting frames...
+2024-12-23 20:10:24,283 - INFO - Performing technical analysis...
+2024-12-23 20:10:29,852 - INFO - Performing AI analysis...
+2024-12-23 20:11:07,142 - INFO - Aggregating results...
+2024-12-23 20:11:07,150 - INFO - Analysis complete. Report saved to analysis_results\analysis_report_generated-video.txt
+2024-12-23 20:11:07,180 - INFO - 127.0.0.1 - - [23/Dec/2024 20:11:07] "POST /analyze HTTP/1.1" 200 -
+2024-12-23 20:20:52,789 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 20:20:52,790 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 20:20:52,793 - INFO -  * Restarting with stat
+2024-12-23 20:21:12,209 - WARNING -  * Debugger is active!
+2024-12-23 20:21:12,236 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 20:22:10,729 - INFO - 127.0.0.1 - - [23/Dec/2024 20:22:10] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 20:22:26,281 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 20:22:26,285 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_202210\\ecovive_ad.mp4'}
+2024-12-23 20:22:26,439 - INFO - 127.0.0.1 - - [23/Dec/2024 20:22:26] "POST /generate HTTP/1.1" 200 -
+2024-12-23 20:23:05,281 - INFO - Validating inputs...
+2024-12-23 20:23:05,283 - INFO - Extracting frames...
+2024-12-23 20:23:06,231 - INFO - Performing technical analysis...
+2024-12-23 20:23:11,802 - INFO - Performing AI analysis...
+2024-12-23 20:23:47,722 - INFO - Aggregating results...
+2024-12-23 20:23:47,729 - INFO - Analysis complete. Report saved to analysis_results\analysis_report_generated-video_1.txt
+2024-12-23 20:23:47,761 - INFO - 127.0.0.1 - - [23/Dec/2024 20:23:47] "POST /analyze HTTP/1.1" 200 -
+2024-12-23 20:48:54,077 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 20:48:54,078 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 20:48:54,082 - INFO -  * Restarting with stat
+2024-12-23 20:49:13,350 - WARNING -  * Debugger is active!
+2024-12-23 20:49:13,373 - INFO -  * Debugger PIN: 339-382-334
+2024-12-23 20:49:14,746 - INFO - Validating inputs...
+2024-12-23 20:49:14,747 - INFO - Extracting frames...
+2024-12-23 20:49:15,682 - INFO - Performing technical analysis...
+2024-12-23 20:49:21,455 - INFO - Performing AI analysis...
+2024-12-23 20:50:00,337 - INFO - Aggregating results...
+2024-12-23 20:50:00,341 - INFO - Analysis complete. Report saved to analysis_results\analysis_report_final_advertisement_4.txt
+2024-12-23 20:50:00,365 - INFO - 127.0.0.1 - - [23/Dec/2024 20:50:00] "POST /analyze HTTP/1.1" 200 -
+2024-12-23 20:50:12,560 - INFO - 127.0.0.1 - - [23/Dec/2024 20:50:12] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-23 20:50:25,585 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-23 20:50:25,586 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241223_205012\\ecovive_ad.mp4'}
+2024-12-23 20:50:25,662 - INFO - 127.0.0.1 - - [23/Dec/2024 20:50:25] "POST /generate HTTP/1.1" 200 -
+2024-12-23 21:01:48,964 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 21:01:48,965 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 21:01:48,977 - INFO -  * Restarting with stat
+2024-12-23 21:02:32,188 - WARNING -  * Debugger is active!
+2024-12-23 21:02:32,235 - INFO -  * Debugger PIN: 339-382-334
+2024-12-24 00:03:47,323 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-24 00:03:47,324 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-24 00:03:47,333 - INFO -  * Restarting with stat
+2024-12-24 00:04:25,196 - WARNING -  * Debugger is active!
+2024-12-24 00:04:25,250 - INFO -  * Debugger PIN: 339-382-334
+2024-12-24 00:04:28,491 - INFO - 127.0.0.1 - - [24/Dec/2024 00:04:28] "OPTIONS /generate HTTP/1.1" 200 -
+2024-12-24 00:04:54,860 - INFO - Matching criteria check - Product: True, Tagline: True
+2024-12-24 00:04:54,862 - INFO - Preset video information provided: {'direct_url': 'https://media-hosting.imagekit.io//ddd5dab906bb4cad/ecovivefinal%20(online-video-cutter.com).mp4?Expires=1735100685&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=umzxINSMgbkbJkR1ZUlzPCBOCgiNoyZw~pdOwXi7TO1enPl-uS9RSwdYfRQj5AVlydFiDHejKEU1ALSV15z9djxUEn~EUylKi2I2DWjeLmIqwif-uduDlhE9BDuDTA09aBaAPpRdrMLWRVPZbVJtn1G~NT0VIi7ApQvMMZJSmFN~dmuhI3ofx-vsLp~U1vCsU5Q67rT4ChCz~Jk47DcpMa6ZXXhR4HBHAjrIvGsu-JzLOptWy8XJMOG9Mjuno1budTXDxk76x5r3xZaRAYvvtvtfKm-dn8lYMRhietT9742~XYkJrH6kqqDUmX96eMl9f4Hx5090mg169gKMxDh2FA__', 'filename': 'ecovive_ad.mp4', 'local_path': './generated\\campaign_20241224_000428\\ecovive_ad.mp4'}
+2024-12-24 00:04:55,011 - INFO - 127.0.0.1 - - [24/Dec/2024 00:04:55] "POST /generate HTTP/1.1" 200 -
+2024-12-24 00:05:32,504 - INFO - Validating inputs...
+2024-12-24 00:05:32,508 - INFO - Extracting frames...
+2024-12-24 00:05:34,252 - INFO - Performing technical analysis...
+2024-12-24 00:05:44,426 - INFO - Performing AI analysis...
+2024-12-24 00:06:25,772 - INFO - Aggregating results...
+2024-12-24 00:06:25,787 - INFO - Analysis complete. Report saved to analysis_results\analysis_report_final_advertisement_4.txt
+2024-12-24 00:06:25,873 - INFO - 127.0.0.1 - - [24/Dec/2024 00:06:25] "POST /analyze HTTP/1.1" 200 -
+2024-12-23 20:42:47,288 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 20:42:47,289 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 20:42:47,291 - INFO -  * Restarting with stat
+2024-12-23 20:42:54,931 - WARNING -  * Debugger is active!
+2024-12-23 20:42:54,935 - INFO -  * Debugger PIN: 135-733-820
+2024-12-23 21:07:03,066 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-23 21:07:03,067 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 21:07:03,069 - INFO -  * Restarting with stat
+2024-12-23 21:07:09,822 - WARNING -  * Debugger is active!
+2024-12-23 21:07:09,824 - INFO -  * Debugger PIN: 310-812-975
+2024-12-23 21:46:08,374 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2024-12-23 21:46:08,376 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 21:48:10,810 - INFO - 172.18.0.1 - - [23/Dec/2024 21:48:10] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-23 21:48:10,967 - INFO - 172.18.0.1 - - [23/Dec/2024 21:48:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-23 21:48:34,559 - INFO - 172.18.0.1 - - [23/Dec/2024 21:48:34] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-23 21:56:15,230 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2024-12-23 21:56:15,233 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 22:25:37,334 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2024-12-23 22:25:37,335 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 22:34:46,354 - INFO - 172.18.0.1 - - [23/Dec/2024 22:34:46] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-23 23:02:41,393 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2024-12-23 23:02:41,394 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-23 23:02:56,359 - INFO - 172.18.0.1 - - [23/Dec/2024 23:02:56] "[33mGET / HTTP/1.1[0m" 404 -

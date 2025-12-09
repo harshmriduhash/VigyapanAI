@@ -1,0 +1,100 @@
+{
+    "analysis_results": {
+        "technical_metrics": {
+            "color": {
+                "dominant_colors": 133.18099678722734,
+                "color_harmony": 0.8769839026342696,
+                "avg_saturation": 0.28588225350385754,
+                "avg_brightness": 0.5908332612800246
+            },
+            "composition": {
+                "balance_score": 0.9051066393957274,
+                "thirds_alignment": 0.5306298608274329,
+                "overall_composition": 0.7178682501115802
+            },
+            "brand": {
+                "brand_presence": 0.5,
+                "color_compliance": 0.11759288216803743,
+                "overall_brand_score": 0.3087964410840187
+            },
+            "product": {
+                "focus_quality": 0.006953819744303699,
+                "product_prominence": 0.12594521604938272,
+                "clarity": 0.5740754166915772,
+                "overall_product_score": 0.23565815082842123
+            }
+        },
+        "ai_metrics": {
+            "visual_impact": 0.85,
+            "creative_execution": 0.7,
+            "audience_engagement": 0.75,
+            "production_quality": 0.9,
+            "brand_integration": 0.9,
+            "tagline_effectiveness": 0.6
+        },
+        "technical_score": 0.5118044395913989,
+        "ai_score": 0.7833333333333332
+    },
+    "recommendations": [
+        "Increase adherence to brand color guidelines",
+        "Improve product visibility and prominence",
+        "Enhance product clarity and focus",
+        "Strengthen brand visibility in the video"
+    ],
+    "scores": {
+        "technical_score": 0.5118044395913989,
+        "ai_score": 0.7833333333333332,
+        "overall_score": 0.7018746652107529,
+        "score_breakdown": {
+            "technical_score": {
+                "raw_score": 51.180443959139886,
+                "weight": 30.0,
+                "weighted_contribution": 15.354133187741967
+            },
+            "ai_score": {
+                "raw_score": 78.33333333333331,
+                "weight": 70.0,
+                "weighted_contribution": 54.83333333333332
+            },
+            "calculation_explanation": "Final Score: (51.2 \u00d7 0.3) + (78.3 \u00d7 0.7) = 70.2"
+        },
+        "detailed_scores": {
+            "color": {
+                "dominant_colors": 133.18099678722734,
+                "color_harmony": 0.8769839026342696,
+                "avg_saturation": 0.28588225350385754,
+                "avg_brightness": 0.5908332612800246
+            },
+            "composition": {
+                "balance_score": 0.9051066393957274,
+                "thirds_alignment": 0.5306298608274329,
+                "overall_composition": 0.7178682501115802
+            },
+            "brand": {
+                "brand_presence": 0.5,
+                "color_compliance": 0.11759288216803743,
+                "overall_brand_score": 0.3087964410840187
+            },
+            "product": {
+                "focus_quality": 0.006953819744303699,
+                "product_prominence": 0.12594521604938272,
+                "clarity": 0.5740754166915772,
+                "overall_product_score": 0.23565815082842123
+            },
+            "ai_evaluation": {
+                "visual_impact": 0.85,
+                "creative_execution": 0.7,
+                "audience_engagement": 0.75,
+                "production_quality": 0.9,
+                "brand_integration": 0.9,
+                "tagline_effectiveness": 0.6
+            }
+        }
+    },
+    "metadata": {
+        "frames_analyzed": 1,
+        "sample_rate": 30,
+        "filename": "final_advertisement_3.mp4",
+        "analysis_date": "2024-12-23 18:06:49"
+    }
+}

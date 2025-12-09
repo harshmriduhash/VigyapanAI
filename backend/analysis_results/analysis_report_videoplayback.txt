@@ -1,0 +1,74 @@
+Video Advertisement Analysis Report
+==================================================
+
+Product: videoplayback
+Brand: Not specified
+Analysis Date: 2024-12-21 16:52:17
+
+Overall Score: 81/100
+
+Detailed Category Scores:
+------------------------
+
+Visual Impact:
+Score: 15/30
+- Visual clarity and composition alignment
+- Color harmony and balance
+- Overall visual appeal
+
+Creative Execution:
+Score: 12/25
+- Innovation in presentation
+- Storytelling effectiveness
+- Brand integration quality
+
+Audience Engagement:
+Score: 12/25
+- Target audience alignment
+- Message clarity
+- Call-to-action effectiveness
+
+Production Quality:
+Score: 10/20
+- Technical excellence
+- Smooth transitions
+- Professional polish
+
+Technical Metrics:
+-----------------
+Color Analysis:
+- Color Harmony: 0.76
+- Color Saturation: 0.28
+- Brightness Level: 0.42
+
+Composition Analysis:
+- Balance Score: 0.86
+- Rule of Thirds: 0.23
+- Overall Composition: 0.54
+
+Brand & Product Presence:
+- Brand Visibility: 0.50
+- Product Focus: 0.01
+- Visual Clarity: 0.58
+
+Key Insights:
+------------
+- Strong color harmony enhances visual appeal
+- Excellent visual balance and composition
+
+Recommendations:
+---------------
+- Strengthen brand visibility in the video
+- Enhance product clarity and focus
+- Improve product visibility and prominence
+- Better utilize the rule of thirds for key elements
+- Increase adherence to brand color guidelines
+
+Technical Specifications:
+-----------------------
+- Frames Analyzed: 11
+- Sample Rate: 30 fps
+- Filename: videoplayback.mp4
+
+Note: Scores are normalized on a scale of 0-100. 
+Raw analysis data saved in JSON format for further processing.

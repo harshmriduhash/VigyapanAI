@@ -1,0 +1,43 @@
+google-generativeai
+numpy
+opencv-python
+scikit-learn
+pillow
+# Core Libraries
+numpy
+torch
+opencv-python
+tensorflow
+Pillow
+scipy
+pydub
+requests
+python-dotenv
+
+# AI/ML Libraries
+transformers
+diffusers
+google-generativeai
+
+# Audio Processing
+soundfile
+librosa
+
+# Image Processing
+scikit-image
+
+# Utility Libraries
+tqdm
+dataclasses
+typing-extensions
+python-dateutil
+urllib3
+
+# Optional Dependencies (for full functionality)
+cuda-python  # For GPU support
+ffmpeg-python  # For video processing
+flask==3.0.0
+flask-cors==4.0.0
+python-dotenv==1.0.0
+opencv-python-headless==4.8.1.78
+numpy>=1.24.3
