@@ -79,3 +79,5 @@ Ensure env vars are exported in your shell (compose passes Supabase vars to fron
 - Run API + worker + Redis; ensure ffmpeg available (Dockerfile already installs it).
 - Monitor Replicate/Gemini usage; adjust `RATE_LIMIT_*` for cost control.
 
+
+
