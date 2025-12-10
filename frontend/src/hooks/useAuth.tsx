@@ -24,13 +24,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const session = supabase.auth.getSession().then(({ data }) => {
       const current = data.session?.user;
-      setUser(current ? { id: current.id, email: current.email ?? undefined } : null);
+      setUser(
+        current ? { id: current.id, email: current.email ?? undefined } : null
+      );
       setLoading(false);
     });
 
     const { data: listener } = supabase.auth.onAuthStateChange((_, session) => {
       const current = session?.user;
-      setUser(current ? { id: current.id, email: current.email ?? undefined } : null);
+      setUser(
+        current ? { id: current.id, email: current.email ?? undefined } : null
+      );
     });
 
     return () => {
@@ -40,7 +44,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const signIn = async (email: string, password: string) => {
     setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
     if (error) throw error;
     setLoading(false);
   };
@@ -63,7 +70,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, signIn, signUp, signOut, getToken }}>
+    <AuthContext.Provider
+      value={{ user, loading, signIn, signUp, signOut, getToken }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -76,4 +85,3 @@ export const useAuth = () => {
   }
   return ctx;
 };
-
