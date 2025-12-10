@@ -24,7 +24,8 @@ const Login = () => {
     } catch (err) {
       toast({
         title: "Auth error",
-        description: err instanceof Error ? err.message : "Authentication failed",
+        description:
+          err instanceof Error ? err.message : "Authentication failed",
         variant: "destructive",
       });
     }
@@ -58,10 +59,19 @@ const Login = () => {
             />
           </div>
           <div className="flex gap-2">
-            <Button className="w-full" disabled={loading} onClick={() => handleAuth("signin")}>
+            <Button
+              className="w-full"
+              disabled={loading}
+              onClick={() => handleAuth("signin")}
+            >
               Sign In
             </Button>
-            <Button variant="outline" className="w-full" disabled={loading} onClick={() => handleAuth("signup")}>
+            <Button
+              variant="outline"
+              className="w-full"
+              disabled={loading}
+              onClick={() => handleAuth("signup")}
+            >
               Sign Up
             </Button>
           </div>
@@ -72,4 +82,3 @@ const Login = () => {
 };
 
 export default Login;
-

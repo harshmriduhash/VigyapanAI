@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { ArrowLeft, Loader, Download, BarChart  } from "lucide-react";
+import { ArrowLeft, Loader, Download, BarChart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import { authFetch } from "@/lib/api";
@@ -28,33 +28,33 @@ const ResultsSection = ({ videoUrl, onNewVideo }) => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isDownloading, setIsDownloading] = useState(false);
-  
+
   const handleDownload = async () => {
     try {
       setIsDownloading(true);
       const response = await fetch(videoUrl);
-      
-      if (!response.ok) throw new Error('Download failed');
-      
+
+      if (!response.ok) throw new Error("Download failed");
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = url;
-      link.download = 'generated-video.mp4';
+      link.download = "generated-video.mp4";
       document.body.appendChild(link);
       link.click();
       window.URL.revokeObjectURL(url);
       document.body.removeChild(link);
-      
+
       toast({
         title: "Success",
-        description: "Video downloaded successfully!"
+        description: "Video downloaded successfully!",
       });
     } catch (error) {
       toast({
         title: "Download Failed",
         description: "Unable to download the video. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       });
     } finally {
       setIsDownloading(false);
@@ -62,7 +62,7 @@ const ResultsSection = ({ videoUrl, onNewVideo }) => {
   };
 
   const handleAnalysis = () => {
-    navigate('/analysis', { state: { videoUrl } });
+    navigate("/analysis", { state: { videoUrl } });
   };
 
   return (
@@ -72,8 +72,8 @@ const ResultsSection = ({ videoUrl, onNewVideo }) => {
           <div className="text-center">
             <div className="mt-4">
               <div className="relative w-full max-w-2xl mx-auto rounded-lg shadow-lg overflow-hidden">
-                <video 
-                  controls 
+                <video
+                  controls
                   className="w-full h-full"
                   src={videoUrl}
                   preload="metadata"
@@ -123,7 +123,6 @@ const ResultsSection = ({ videoUrl, onNewVideo }) => {
     </div>
   );
 };
-
 
 const Generator = () => {
   const navigate = useNavigate();
@@ -191,7 +190,7 @@ const Generator = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       toast({
         title: "Validation Error",
@@ -205,8 +204,8 @@ const Generator = () => {
     setProgress(10);
 
     try {
-      const response = await authFetch('/generate', {
-        method: 'POST',
+      const response = await authFetch("/generate", {
+        method: "POST",
         body: JSON.stringify(formData),
       });
 
@@ -230,10 +229,11 @@ const Generator = () => {
         description: "Video generated successfully!",
       });
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       toast({
         title: "Error",
-        description: error instanceof Error ? error.message : "Failed to generate video",
+        description:
+          error instanceof Error ? error.message : "Failed to generate video",
         variant: "destructive",
       });
     } finally {
@@ -308,17 +308,22 @@ const Generator = () => {
                         id="productName"
                         value={formData.productName}
                         onChange={(e) => {
-                          setFormData({ ...formData, productName: e.target.value });
+                          setFormData({
+                            ...formData,
+                            productName: e.target.value,
+                          });
                           if (errors.productName) {
                             setErrors({ ...errors, productName: "" });
                           }
                         }}
                         className={`transition-all duration-300 focus:ring-2 focus:ring-emerald-500 ${
-                          errors.productName ? 'border-red-500' : ''
+                          errors.productName ? "border-red-500" : ""
                         }`}
                       />
                       {errors.productName && (
-                        <p className="text-sm text-red-500 mt-1">{errors.productName}</p>
+                        <p className="text-sm text-red-500 mt-1">
+                          {errors.productName}
+                        </p>
                       )}
                     </div>
 
@@ -335,54 +340,70 @@ const Generator = () => {
                           }
                         }}
                         className={`transition-all duration-300 focus:ring-2 focus:ring-emerald-500 ${
-                          errors.tagline ? 'border-red-500' : ''
+                          errors.tagline ? "border-red-500" : ""
                         }`}
                       />
                       {errors.tagline && (
-                        <p className="text-sm text-red-500 mt-1">{errors.tagline}</p>
+                        <p className="text-sm text-red-500 mt-1">
+                          {errors.tagline}
+                        </p>
                       )}
                     </div>
 
                     {/* Duration */}
                     <div>
-                      <Label htmlFor="duration">Video Duration (seconds) *</Label>
+                      <Label htmlFor="duration">
+                        Video Duration (seconds) *
+                      </Label>
                       <Input
                         id="duration"
                         type="number"
                         value={formData.duration}
                         onChange={(e) => {
-                          setFormData({ ...formData, duration: e.target.value });
+                          setFormData({
+                            ...formData,
+                            duration: e.target.value,
+                          });
                           if (errors.duration) {
                             setErrors({ ...errors, duration: "" });
                           }
                         }}
                         className={`transition-all duration-300 focus:ring-2 focus:ring-emerald-500 ${
-                          errors.duration ? 'border-red-500' : ''
+                          errors.duration ? "border-red-500" : ""
                         }`}
                       />
                       {errors.duration && (
-                        <p className="text-sm text-red-500 mt-1">{errors.duration}</p>
+                        <p className="text-sm text-red-500 mt-1">
+                          {errors.duration}
+                        </p>
                       )}
                     </div>
 
                     {/* Call to Action */}
                     <div>
-                      <Label htmlFor="callToAction">Call to Action Text *</Label>
+                      <Label htmlFor="callToAction">
+                        Call to Action Text *
+                      </Label>
                       <Input
                         id="callToAction"
                         value={formData.callToAction}
                         onChange={(e) => {
-                          setFormData({ ...formData, callToAction: e.target.value });
+                          setFormData({
+                            ...formData,
+                            callToAction: e.target.value,
+                          });
                           if (errors.callToAction) {
                             setErrors({ ...errors, callToAction: "" });
                           }
                         }}
                         className={`transition-all duration-300 focus:ring-2 focus:ring-emerald-500 ${
-                          errors.callToAction ? 'border-red-500' : ''
+                          errors.callToAction ? "border-red-500" : ""
                         }`}
                       />
                       {errors.callToAction && (
-                        <p className="text-sm text-red-500 mt-1">{errors.callToAction}</p>
+                        <p className="text-sm text-red-500 mt-1">
+                          {errors.callToAction}
+                        </p>
                       )}
                     </div>
 
@@ -399,32 +420,48 @@ const Generator = () => {
                           }
                         }}
                         className={`transition-all duration-300 focus:ring-2 focus:ring-emerald-500 ${
-                          errors.logoUrl ? 'border-red-500' : ''
+                          errors.logoUrl ? "border-red-500" : ""
                         }`}
                         placeholder="Enter a publicly accessible image URL"
                       />
                       {errors.logoUrl && (
-                        <p className="text-sm text-red-500 mt-1">{errors.logoUrl}</p>
+                        <p className="text-sm text-red-500 mt-1">
+                          {errors.logoUrl}
+                        </p>
                       )}
                     </div>
 
                     {/* Optional fields */}
                     <div>
-                      <Label htmlFor="targetAudience">Target Audience (optional)</Label>
+                      <Label htmlFor="targetAudience">
+                        Target Audience (optional)
+                      </Label>
                       <Input
                         id="targetAudience"
                         value={formData.targetAudience}
-                        onChange={(e) => setFormData({ ...formData, targetAudience: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            targetAudience: e.target.value,
+                          })
+                        }
                         className="transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="campaignGoal">Campaign Goal (optional)</Label>
+                      <Label htmlFor="campaignGoal">
+                        Campaign Goal (optional)
+                      </Label>
                       <Input
                         id="campaignGoal"
                         value={formData.campaignGoal}
-                        onChange={(e) => setFormData({ ...formData, campaignGoal: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            campaignGoal: e.target.value,
+                          })
+                        }
                         className="transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                       />
                     </div>
@@ -437,7 +474,12 @@ const Generator = () => {
                         id="brandColors"
                         placeholder="e.g., #FF0000, #00FF00, #0000FF"
                         value={formData.brandColors}
-                        onChange={(e) => setFormData({ ...formData, brandColors: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            brandColors: e.target.value,
+                          })
+                        }
                         className="transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                       />
                     </div>
@@ -471,10 +513,7 @@ const Generator = () => {
             </Card>
           </>
         ) : (
-          <ResultsSection
-            videoUrl={videoUrl}
-            onNewVideo={handleNewVideo}
-          />
+          <ResultsSection videoUrl={videoUrl} onNewVideo={handleNewVideo} />
         )}
       </div>
     </div>
