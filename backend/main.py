@@ -5,11 +5,14 @@ from rq.job import Job
 
 from auth import User, auth_dependency
 from config import get_settings
+from credits import consume_credit, get_balance
 from rate_limiter import check_rate_limit
 from queue import get_queue, get_redis
 from schemas import GenerateRequest, AnalyzeRequest, JobResponse, JobStatus
 from jobs.generate import enqueue_generate
 from jobs.analyze import enqueue_analyze
+from billing import create_order, verify_and_apply
+from fastapi import Request
 
 
 settings = get_settings()
@@ -33,6 +36,7 @@ def health():
 @app.post("/generate", response_model=JobResponse)
 def generate_ad(request: GenerateRequest, user: User = Depends(auth_dependency)):
     check_rate_limit(user.sub)
+    consume_credit(user.sub)
     job_id = enqueue_generate(request, user)
     return JobResponse(job_id=job_id)
 
@@ -40,6 +44,7 @@ def generate_ad(request: GenerateRequest, user: User = Depends(auth_dependency))
 @app.post("/analyze", response_model=JobResponse)
 def analyze(request: AnalyzeRequest, user: User = Depends(auth_dependency)):
     check_rate_limit(user.sub)
+    consume_credit(user.sub)
     job_id = enqueue_analyze(request, user)
     return JobResponse(job_id=job_id)
 
@@ -57,4 +62,32 @@ def job_status(job_id: str, user: User = Depends(auth_dependency)):
     error = job.meta.get("error") if job.meta else None
 
     return JobStatus(status=status_str, result_url=result, error=error)
+
+
+@app.get("/billing/credits")
+def credits_balance(user: User = Depends(auth_dependency)):
+    return {"balance": get_balance(user.sub)}
+
+
+@app.post("/billing/order")
+def billing_order(plan: str, user: User = Depends(auth_dependency)):
+    order = create_order(user.sub, plan)
+    return order
+
+
+@app.post("/billing/webhook")
+async def billing_webhook(request: Request):
+    payload = await request.body()
+    signature = request.headers.get("X-Razorpay-Signature")
+    if not signature:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Missing signature")
+
+    data = await request.json()
+    order_id = data.get("payload", {}).get("payment", {}).get("entity", {}).get("order_id")
+    payment_id = data.get("payload", {}).get("payment", {}).get("entity", {}).get("id")
+    if not order_id or not payment_id:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Missing payment details")
+
+    verify_and_apply(payload, signature, order_id, payment_id)
+    return {"status": "ok"}
 

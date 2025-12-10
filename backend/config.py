@@ -30,6 +30,10 @@ class Settings(BaseSettings):
     # Redis / queue
     redis_url: str = "redis://redis:6379/0"
 
+    # Billing
+    razorpay_key_id: str
+    razorpay_key_secret: str
+
     # Rate limiting
     rate_limit_requests: int = 20
     rate_limit_window_seconds: int = 3600

@@ -28,6 +28,8 @@ REDIS_URL=redis://localhost:6379/0
 FRONTEND_URL=http://localhost:8080
 RATE_LIMIT_REQUESTS=20
 RATE_LIMIT_WINDOW_SECONDS=3600
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
 ```
 Frontend `.env` (create in `frontend/.env.local`):
 ```
