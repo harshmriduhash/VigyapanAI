@@ -61,7 +61,7 @@ const Evaluation = () => {
       setProgress(100);
       setReport(`Report ready. Download: ${resultUrl}`);
       setShowResults(true);
-      
+
       toast({
         title: "Analysis Complete",
         description: "Your advertisement analysis is ready to view",
@@ -70,8 +70,9 @@ const Evaluation = () => {
       console.error("Analysis error:", error);
       toast({
         title: "Analysis Failed",
-        description: "There was an error analyzing your advertisement. Please try again.",
-        variant: "destructive"
+        description:
+          "There was an error analyzing your advertisement. Please try again.",
+        variant: "destructive",
       });
     } finally {
       setIsLoading(false);
@@ -144,7 +145,10 @@ const Evaluation = () => {
                         placeholder="Enter product name"
                         value={formData.productName}
                         onChange={(e) =>
-                          setFormData({ ...formData, productName: e.target.value })
+                          setFormData({
+                            ...formData,
+                            productName: e.target.value,
+                          })
                         }
                         className="transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                       />
@@ -159,7 +163,10 @@ const Evaluation = () => {
                         placeholder="Enter brand name"
                         value={formData.brandName}
                         onChange={(e) =>
-                          setFormData({ ...formData, brandName: e.target.value })
+                          setFormData({
+                            ...formData,
+                            brandName: e.target.value,
+                          })
                         }
                         className="transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                       />
@@ -188,7 +195,10 @@ const Evaluation = () => {
                         type="color"
                         value={formData.colorPalette}
                         onChange={(e) =>
-                          setFormData({ ...formData, colorPalette: e.target.value })
+                          setFormData({
+                            ...formData,
+                            colorPalette: e.target.value,
+                          })
                         }
                         className="h-12 cursor-pointer"
                       />
